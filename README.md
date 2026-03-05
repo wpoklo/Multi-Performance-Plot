@@ -62,9 +62,14 @@ The procedure to upload a compatible CSV is as follows:
 - Using the A**D**E**M**P stucture described by Morris et al. (2019), tabulate all combinations of parameters of  **D**ata-generating mechanisms and **M**ethods.
   As an example, using this case: https://cran.r-project.org/web/packages/rsimsum/vignettes/B-relhaz.html, the **M**ethods investigated are [Cox vs Exp vs RP(2)] models,
   and there are two simulated parameters to generate the **D**ata-generating mechanisms: Baseline hazard function [Exponential vs Weibull], and Sample size [50 vs 250].
-  Therefore, there are three parameters in total: model; baseline; sample size. These result in (3 x 2 x 2) = 12 combinations: [Cox + Exponential + 50];
-  [Exp + Exponential + 50]; [RP(2) + Exponential + 50]; [Cox + Weibull + 50]; [Exp + Weibull + 50]; [RP(2) + Weibull + 50]; [Cox + Exponential + 250];
-  [Exp + Exponential + 250]; [RP(2) + Exponential + 250]; [Cox + Weibull + 250]; [Exp + Weibull + 250]; [RP(2) + Weibull + 250].
+  Therefore, there are three parameters in total: model; baseline; sample size. These result in (3 x 2 x 2) = 12 combinations:
+
+  ```
+  [Cox + Exponential + 50];  [Exp + Exponential + 50]; [RP(2) + Exponential + 50]; [Cox + Weibull + 50]; [Exp + Weibull + 50]; [RP(2) + Weibull + 50];
+  [Cox + Exponential + 250]; [Exp + Exponential + 250]; [RP(2) + Exponential + 250]; [Cox + Weibull + 250]; [Exp + Weibull + 250]; [RP(2) + Weibull + 250]
+  ```
+
+  Please see Example table at the end of this document.
   
 - In producing the CSV, leave the first four columns blank, and enter these combinations of parameters from the fifth column onwards, as shown in the Example table at the
   end of this document.
@@ -86,16 +91,16 @@ Example table:
 
 ```
         bias	      empse	    modelse	cover	model	baseline	  n
- 0.021479986	0.328476474	0.318460370	0.95	Cox	  Exponential	  50
- 0.023914113	0.325755906	0.312674786	0.94	Exp	  Exponential	    50
- 0.018283911	0.331174565	0.316501970	0.95	RP(2) Exponential	50
--0.028186623	0.311454757	0.305189809	0.97	Cox	      Weibull   50
- 0.150920681	0.204130251	0.288842868	0.99	Exp	  Weibull	    50
--0.034771249	0.311079844	0.299609422	0.95	RP(2)	Weibull	    50
+ 0.021479986	0.328476474	0.318460370	0.95	Cox	  Exponential	 50
+ 0.023914113	0.325755906	0.312674786	0.94	Exp	  Exponential	 50
+ 0.018283911	0.331174565	0.316501970	0.95	RP(2) Exponential	 50
+-0.028186623	0.311454757	0.305189809	0.97	Cox	      Weibull    50
+ 0.150920681	0.204130251	0.288842868	0.99	Exp	      Weibull	 50
+-0.034771249	0.311079844	0.299609422	0.95	RP(2)	  Weibull	 50
 -0.021524079	0.148833647	0.139605737	0.93	Cox	  Exponential	250
 -0.021353589	0.150640036	0.138085835	0.92	Exp	  Exponential	250
--0.022743755	0.148944708	0.139392412	0.93	RP(2)	Exponential	250
--0.012041211	0.133345051	0.132047807	0.94	Cox	  Weibull	    250
- 0.148162448	0.092941412	0.128051187	0.85	Exp	  Weibull	    250
--0.013933685	0.136774527	0.131277399	0.94	RP(2)	Weibull	    250
+-0.022743755	0.148944708	0.139392412	0.93	RP(2) Exponential	250
+-0.012041211	0.133345051	0.132047807	0.94	Cox	      Weibull	250
+ 0.148162448	0.092941412	0.128051187	0.85	Exp	      Weibull	250
+-0.013933685	0.136774527	0.131277399	0.94	RP(2)	  Weibull	250
 ```
