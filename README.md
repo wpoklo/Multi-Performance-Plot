@@ -82,7 +82,7 @@ Two example CSVs are attached in this repository: gasparinidf.csv which is the e
 Table I of Parast et al. (2016).
 
 Once the CSV has been uploaded, a total of seven boxes will be displayed. The first three boxes ask for which parameters should be presented in the multi-performance plot,
-in the form of shapes, line types and line colours (as described in the Methods section). The fourth boxes asks for the pre-determined coverage threshold; by default,
+in the form of shapes, line types and line colours (as described in the Methods section). The fourth box asks for the pre-determined coverage threshold; by default,
 this is set to 0.95. Finally, the last three boxes ask for the names of the parameters that should be displayed in the legends of the multi-performance plot.
 
 The two example CSVs can be uploaded to experiment with this tool, before uploading your own dataset.
